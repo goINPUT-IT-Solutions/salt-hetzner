@@ -1,4 +1,5 @@
 base:
   '*':
     - basictools
-
+  '*web*':
+    - webserver
