@@ -3,5 +3,5 @@ base:
     - basictools
   '*web*':
     - webserver
-  '*mail*'
+  '*mail*':
     - mailserver
