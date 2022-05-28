@@ -5,7 +5,5 @@ https://github.com/mailcow/mailcow-dockerized:
 
 user.present:
     - name: mailcow
-    - fullname: The mailserver suite with the 'moo'
     - shell: /bin/sh
     - home: /opt/mailcow
-    
