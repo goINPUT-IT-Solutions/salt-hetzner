@@ -3,7 +3,10 @@ https://github.com/mailcow/mailcow-dockerized:
     - target: /opt/mailcow
     - branch: master
 
-user.present:
-    - name: mailcow
-    - shell: /bin/sh
-    - home: /opt/mailcow
+mailcow_user:
+  user.present:
+      - name: mailcow
+      - fullname: The mailserver suite with the 'moo'
+      - shell: /bin/sh
+      - home: /opt/mailcow
+    
