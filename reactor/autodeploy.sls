@@ -1,4 +1,4 @@
-reactor_git_runner:
+reactor_git_saltclass:
   runner.state.orchestrate:
     - args:
-      - mods: orchestr_runners.orchester_git_runner
+      - mods: orch.saltclass-git
