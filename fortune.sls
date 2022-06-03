@@ -22,7 +22,7 @@ install_fortune:
 
 run_installer:
     cmd.run:
-        - name: /opt/motivate/motivate/install.sh > /dev/null 2>&1
+        - name: sh /opt/motivate/motivate/install.sh > /dev/null 2>&1
 
 install_to_root_profile:
     file.append:
