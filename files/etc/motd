@@ -20,5 +20,5 @@ https://github.com/goINPUT-IT-Solutions/terraform-goinput
 Salt Repo:
 https://github.com/goINPUT-IT-Solutions/salt-hetzner
 
-Willkommen auf {{ salt['grains.get']('host') }} mit {{ salt['grains.get']('osfullname') }} {{ salt['grains.get']('osmajorrelease') }}.
+Willkommen auf {{ salt['grains.get']('fqdn') }} mit {{ salt['grains.get']('osfullname') }} {{ salt['grains.get']('osmajorrelease') }}.
 
