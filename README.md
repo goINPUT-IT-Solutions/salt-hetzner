@@ -4,4 +4,5 @@ Saltstack is used for all configuration tasks, terraform provides infrastructure
 Documentation to be added.
 
 # ToDo:
-Use Saltstack Reactor for pull requests.
+- Add security to auto key acception.
+- Use Saltstack Reactor for pull requests.

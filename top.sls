@@ -1,7 +1,7 @@
 base:
   '*':
     - basictools
-  '*web*':
+  'apache*':
     - webserver
-  '*mail*':
+  'mail*':
     - mailserver
