@@ -28,12 +28,12 @@ install_to_root_profile:
     file.append:
         - name: /root/.bashrc
         - text: |
-            
+            print "\n"
             /usr/local/bin/motivate
 
 install_to_profiles:
     file.append:
         - name: /etc/.bashrc
         - text: |
-            
+            print "\n"
             /usr/local/bin/motivate
