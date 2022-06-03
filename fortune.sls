@@ -24,16 +24,16 @@ run_installer:
     cmd.run:
         - name: sh /opt/motivate/motivate/install.sh > /dev/null 2>&1
 
-install_to_root_profile:
-    file.append:
-        - name: /root/.bashrc
-        - text: |
-            print "\n"
-            /usr/local/bin/motivate
+/root/.bashrc:
+    file.managed:
+        - source: salt://files/.bashrc
+        - user: root
+        - group: root
+        - mode: 644
 
-install_to_profiles:
-    file.append:
-        - name: /etc/.bashrc
-        - text: |
-            print "\n"
-            /usr/local/bin/motivate
+/etc/skel/.bashrc:
+    file.managed:
+        - source: salt://files/.bashrc
+        - user: root
+        - group: root
+        - mode: 644
