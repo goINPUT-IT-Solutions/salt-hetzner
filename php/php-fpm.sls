@@ -10,17 +10,13 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-  'apache*':
-    - apache2
-  'mariadb*':
-    - mariadb
-  'mail*':
-    - mailserver
-  'nextcloud*':
-    - apache2
-    - php.php-fpm
+install_php_fpm:
+    pkg.installed:
+    - pkgs:
+      - php-fpm
+      - php-mysql
+      - php-curl
+      - php-mbstring
+      - php-xml
+      - php-zip
+      - php-bz2
