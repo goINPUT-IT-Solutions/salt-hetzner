@@ -9,15 +9,3 @@
 #    |___/                                           #
 #                                                    #
 ######################################################
-
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-  'apache*':
-    - apache2
-  'mariadb*':
-    - mariadb
-  'mail*':
-    - mailserver
