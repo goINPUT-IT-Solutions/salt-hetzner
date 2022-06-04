@@ -10,30 +10,15 @@
 #                                                    #
 ######################################################
 
-install_fortune:
-    pkg.installed:
-        - pkgs:
-            - git
-            - python3
-    
-    git.latest:
-        - name: https://github.com/mubaris/motivate.git
-        - target: /opt/motivate
+Bedenke: Dieses System wird durch Saltstack verwaltet.
+Ändere also keine Dateien direkt im System, da etwaige
+Änderungen überschrieben werden können.
 
-run_installer:
-    cmd.run:
-        - name: sh /opt/motivate/motivate/install.sh > /dev/null 2>&1
+Terraform Repo:
+https://github.com/goINPUT-IT-Solutions/terraform-goinput
 
-/root/.bashrc:
-    file.managed:
-        - source: salt://files/.bashrc
-        - user: root
-        - group: root
-        - mode: 644
+Salt Repo:
+https://github.com/goINPUT-IT-Solutions/salt-hetzner
 
-/etc/skel/.bashrc:
-    file.managed:
-        - source: salt://files/.bashrc
-        - user: root
-        - group: root
-        - mode: 644
+Willkommen auf {{ salt['grains.get']('fqdn') }} mit {{ salt['grains.get']('osfullname') }} {{ salt['grains.get']('osmajorrelease') }}.
+

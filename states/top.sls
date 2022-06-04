@@ -15,7 +15,6 @@ base:
     - basictools
     - buildtools
     - motd
-    - fortune
   'apache*':
     - apache2
   'mariadb*':
