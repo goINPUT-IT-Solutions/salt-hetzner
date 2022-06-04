@@ -14,27 +14,27 @@ install_zsh:
     pkg.installed:
         - pkgs:
             - zsh
-            
+
 /etc/skel/.oh-my-zsh:
     file.recurse:
-        - source: salt://zsh/files/.oh-my-zsh
+        - source: salt://zsh/files/_oh-my-zsh
         - include_empty: True
 
 /etc/skel/.zshrc:
     file.managed:
-        - source: salt://zsh/files/.zshrc
+        - source: salt://zsh/files/_zshrc
         - user: root
         - group: root
         - mode: 0644
 
 /root/.oh-my-zsh:
     file.recurse:
-        - source: salt://zsh/files/.oh-my-zsh
+        - source: salt://zsh/files/_oh-my-zsh
         - include_empty: True
 
 /root/.zshrc:
     file.managed:
-        - source: salt://zsh/files/.zshrc
+        - source: salt://zsh/files/_zshrc
         - user: root
         - group: root
         - mode: 0644
