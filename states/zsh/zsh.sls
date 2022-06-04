@@ -14,15 +14,10 @@ install_zsh:
     pkg.installed:
         - pkgs:
             - zsh
-
-get_ohmyzsh_repo_root:
-    git.latest:
-        - name: https://github.com/goINPUT-IT-Solutions/salt-hetzner.git
-        - target: /srv/salt   
-
+            
 /etc/skel/.oh-my-zsh:
     file.recurse:
-        - source: salt://zsh/files/..oh-my-zsh
+        - source: salt://zsh/files/.oh-my-zsh
         - include_empty: True
 
 /etc/skel/.zshrc:
