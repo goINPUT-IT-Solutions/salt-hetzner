@@ -18,10 +18,14 @@ base:
   'apache*':
     - apache2
     - php.php-fpm
+    - mariadb.mariadb-client
   'mariadb*':
-    - mariadb
+    - mariadb.mariadb-server
+    - mariadb.mariadb-client
   'mail*':
     - mailserver
+    - mariadb.mariadb-client
   'nextcloud*':
     - apache2
     - php.php-fpm
+    - mariadb.mariadb-client

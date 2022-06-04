@@ -1,5 +1,4 @@
-install_mariadb:
+install_mariadb_client:
     pkg.installed:
     - pkgs:
-      - mariadb-server
       - mariadb-client

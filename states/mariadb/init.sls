@@ -1,2 +1,3 @@
 include:
-    - mariadb.mariadb
+    - mariadb.mariadb-server
+    - mariadb.mariadb-client
