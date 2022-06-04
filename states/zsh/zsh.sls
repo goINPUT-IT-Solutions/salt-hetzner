@@ -21,11 +21,6 @@ get_ohmyzsh_repo_root:
         - target: /srv/salt   
 
 /etc/skel/.ohmyzsh:
-    file.directory:
-        - user: root
-        - group: root
-        - mode: 755
-        - makedirs: True 
     file.recurse:
         - source: salt://zsh/files/.ohmyzsh
         - include_empty: True
@@ -38,11 +33,6 @@ get_ohmyzsh_repo_root:
         - mode: 0644
 
 /root/.ohmyzsh:
-    file.directory:
-        - user: root
-        - group: root
-        - mode: 755
-        - makedirs: True 
     file.recurse:
         - source: salt://zsh/files/.ohmyzsh
         - include_empty: True
