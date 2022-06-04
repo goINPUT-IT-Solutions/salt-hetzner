@@ -18,5 +18,4 @@
 # alias mv='mv -i'
 
 #### Display Quotes
-echo ""
-/usr/local/bin/motivate
+

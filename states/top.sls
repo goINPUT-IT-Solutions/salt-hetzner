@@ -15,6 +15,7 @@ base:
     - basictools
     - buildtools
     - motd
+    - zsh
   'apache*':
     - apache2
     - php.php-fpm
