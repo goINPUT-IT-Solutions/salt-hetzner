@@ -6,3 +6,5 @@ install_basic_packages:
       - zip
       - unzip
       - git
+      - whois
+      - needrestart
