@@ -20,18 +20,17 @@ get_ohmyzsh_repo_root:
         - name: https://github.com/goINPUT-IT-Solutions/salt-hetzner.git
         - target: /srv/salt   
 
-ohmyzsh_skel_create:
-    file.directory:
-        - name: /etc/skel/.ohmyzsh
-        - user: root
-        - group: root
-        - mode: 755
-        - makedirs: True
+#ohmyzsh_skel_create:
+#    file.directory:
+#        - name: /etc/skel/.ohmyzsh
+#        - user: root
+#        - group: root
+#        - mode: 755
+#        - makedirs: True
 
-ohmyzsh_skel_data:
+/etc/skel/.oh-my-zsh:
     file.recurse:
-        - name: /etc/skel/.ohmyzsh
-        - source: salt://zsh/files/.ohmyzsh
+        - source: salt://zsh/files/..oh-my-zsh
         - include_empty: True
 
 /etc/skel/.zshrc:
@@ -41,18 +40,17 @@ ohmyzsh_skel_data:
         - group: root
         - mode: 0644
 
-ohmyzsh_root_create:
-    file.directory:
-        - name: /root/.ohmyzsh
-        - user: root
-        - group: root
-        - mode: 755
-        - makedirs: True 
+#ohmyzsh_root_create:
+#    file.directory:
+#        - name: /root/.ohmyzsh
+#        - user: root
+#        - group: root
+#        - mode: 755
+#        - makedirs: True 
 
-ohmyzsh_root_data:
+/root/.oh-my-zsh:
     file.recurse:
-        - name: /root/.ohmyzsh
-        - source: salt://zsh/files/.ohmyzsh
+        - source: salt://zsh/files/.oh-my-zsh
         - include_empty: True
 
 /root/.zshrc:
