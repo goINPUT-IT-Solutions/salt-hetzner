@@ -10,26 +10,21 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-    - zsh
-    - users
-    - ssh
-    - fail2ban
-  'apache*':
-    - apache2
-    - php.php-fpm
-    - mariadb.mariadb-client
-  'mariadb*':
-    - mariadb.mariadb-server
-    - mariadb.mariadb-client
-  'mail*':
-    - mailserver
-    - mariadb.mariadb-client
-  'nextcloud*':
-    - apache2
-    - php.php-fpm
-    - mariadb.mariadb-client
+install_fail2ban:
+    pkg.installed:
+        - pkgs:
+            - fail2ban
+
+{% set file = '/etc/fail2ban/jail.local' %}
+
+{{ file }}:
+  file.managed:
+    - source: salt://fail2ban/files/jail.local
+    - mode: 664
+    
+fail2ban:
+  service.running:
+    - reload: True
+    - watch:
+      - file: {{ file }}
+
