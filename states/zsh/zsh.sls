@@ -15,10 +15,20 @@ install_zsh:
         - pkgs:
             - zsh
 
-/etc/skel/.oh-my-zsh:
-    file.recurse:
-        - source: salt://zsh/files/_oh-my-zsh
-        - include_empty: True
+skel_.oh-my-zsh:
+    git.latest:
+        - name: https://github.com/ohmyzsh/ohmyzsh.git
+        - target: /etc/skel/.oh-my-zsh
+
+skel_zsh-autosuggestions:
+    git.latest:
+        - name: https://github.com/zsh-users/zsh-autosuggestions.git
+        - target: /etc/skel/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+skel_zsh-syntax-highlighting:
+    git.latest:
+        - name: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        - target: /etc/skel/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 /etc/skel/.zshrc:
     file.managed:
@@ -27,10 +37,20 @@ install_zsh:
         - group: root
         - mode: 0644
 
-/root/.oh-my-zsh:
-    file.recurse:
-        - source: salt://zsh/files/_oh-my-zsh
-        - include_empty: True
+root_.oh-my-zsh:
+    git.latest:
+        - name: https://github.com/ohmyzsh/ohmyzsh.git
+        - target: /root/.oh-my-zsh
+
+root_zsh-autosuggestions:
+    git.latest:
+        - name: https://github.com/zsh-users/zsh-autosuggestions.git
+        - target: /root/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+root_zsh-syntax-highlighting:
+    git.latest:
+        - name: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        - target: /root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 /root/.zshrc:
     file.managed:
@@ -39,13 +59,14 @@ install_zsh:
         - group: root
         - mode: 0644
 
+    
+root:
+  user.present:
+    - shell: /bin/zsh
+
 /etc/adduser.conf:
     file.managed:
         - source: salt://files/etc/adduser.conf
         - user: root
         - group: root
         - mode: 0644
-    
-root:
-  user.present:
-    - shell: /bin/zsh
