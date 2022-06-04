@@ -12,15 +12,15 @@
 
 base:
   '*':
-    - basictools
-    - buildtools
-    - motd
+    - states.basictools
+    - states.buildtools
+    - states.motd
   'apache*':
-    - apache2
+    - states.apache2
   'mariadb*':
-    - mariadb
+    - states.mariadb
   'mail*':
-    - mailserver
+    - states.mailserver
   'nextcloud*':
-    - apache2
-    - php.php-fpm
+    - states.apache2
+    - states.php.php-fpm
