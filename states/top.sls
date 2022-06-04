@@ -17,6 +17,7 @@ base:
     - motd
   'apache*':
     - apache2
+    - php.php-fpm
   'mariadb*':
     - mariadb
   'mail*':
