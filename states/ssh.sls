@@ -10,12 +10,15 @@
 #                                                    #
 ######################################################
 
-install_buildtools:
-    pkg.installed:
-    - pkgs:
-      - build-essential
-      - cmake
-      - pkg-config
-      - autogen
-      - automake
-      - autoconf
+{% set file = '/etc/ssh/sshd_config' %}
+
+{{ file }}:
+  file.managed:
+    - source: salt://files/etc/ssh/sshd_config
+    - mode: 664
+    
+sshd:
+  service.running:
+    - reload: True
+    - watch:
+      - file: {{ file }}
