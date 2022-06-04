@@ -17,6 +17,7 @@ base:
     - motd
     - zsh
     - users
+    - ssh
   'apache*':
     - apache2
     - php.php-fpm
