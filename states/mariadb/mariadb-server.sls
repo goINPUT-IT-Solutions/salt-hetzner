@@ -12,6 +12,6 @@ install_mariadb_server:
     
 mysql:
   service.running:
-    - reload: True
     - watch:
       - file: {{ file_server_conf }}
+      
