@@ -1,2 +1,2 @@
 include:
-    - mailserver.mailcow
+    - mailcow.mailcow
