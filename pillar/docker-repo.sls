@@ -10,9 +10,10 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - editor
-    - docker-repo
-  'mail*':
-    - mailcow
+{% if grains['os'] == 'Ubuntu' %}
+docker-repo: https://download.docker.com/linux/ubuntu
+docker-gpg: https://download.docker.com/linux/ubuntu/gpg
+{% elif grains['os'] == 'Debian' %}
+docker-repo: https://download.docker.com/linux/debian
+docker-gpg: https://download.docker.com/linux/debian/gpg
+{% endif %}
