@@ -1,1 +1,0 @@
-MAILCOW_HOSTNAME: {{ grains['host'] }}

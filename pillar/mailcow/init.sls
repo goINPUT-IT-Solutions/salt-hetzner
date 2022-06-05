@@ -10,6 +10,4 @@
 #                                                    #
 ######################################################
 
-base:
-    'mail*':
-        - mailcow
+MAILCOW_HOSTNAME: {{ grains['host'] }}

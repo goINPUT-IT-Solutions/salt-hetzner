@@ -27,8 +27,10 @@ base:
     - mariadb.mariadb-server
     - mariadb.mariadb-client
   'mail*':
-    - mailserver
+    - mailcow
     - mariadb.mariadb-client
+    - docker.docker
+    - docker.docker-compose
   'nextcloud*':
     - apache2
     - php.php-fpm
