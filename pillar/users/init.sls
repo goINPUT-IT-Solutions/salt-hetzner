@@ -12,7 +12,7 @@
 ######################################################
 
 users:
-    - javik:
+    javik:
         - fullname: Benjamin Schneider
         - shell: /bin/zsh
         - home: /home/javik
