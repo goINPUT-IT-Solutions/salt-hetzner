@@ -28,16 +28,17 @@ docker_repo:
         - name: deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] {{ pillar['docker-repo'] }} {{ grains['oscodename'] }} stable
         - file: /etc/apt/sources.list.d/docker.list
 
-#install_docker:
-#    pkg.installed:
-#        - require:
-#            - pkgrepo: docker_repo
-#        - pkgs:
-#            - ca-certificates
-#            - curl
-#            - gnupg
-#            - lsb-release
-#            - docker-ce 
-#            - docker-ce-cli 
-#            - containerd.io 
-#            - docker-compose-plugin
+install_docker:
+    pkg.installed:
+        - require:
+            - pkgrepo: docker_repo
+        - pkgs:
+            - ca-certificates
+            - curl
+            - gnupg
+            - lsb-release
+            - docker-ce 
+            - docker-ce-cli 
+            - containerd.io 
+            - docker-compose-plugin
+            
