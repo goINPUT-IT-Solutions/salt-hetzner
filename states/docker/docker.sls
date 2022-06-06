@@ -10,6 +10,13 @@
 #                                                    #
 ######################################################
 
+/etc/apt/keyrings:
+  file.directory:
+    - user: root
+    - group: root
+    - dir_mode: 755
+    - file_mode: 644
+
 docker_gpg_key:
   cmd.run:
     - name: curl -fsSL {{ pillar['docker-gpg'] }} | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -18,7 +25,7 @@ docker_gpg_key:
 docker_repo:
     pkgrepo.managed:
         - humanname: Docker
-        - name: deb {{ pillar['docker-repo'] }} {{ grains['oscodename'] }} stable
+        - name: deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] {{ pillar['docker-repo'] }} {{ grains['oscodename'] }} stable
         - file: /etc/apt/sources.list.d/docker.list
         - key_url: {{ pillar['docker-gpg'] }}
 
