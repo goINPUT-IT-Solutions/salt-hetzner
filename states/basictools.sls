@@ -35,4 +35,7 @@ install_python_gnupgp:
     - pkgs:
       - python-gnupg
 
+rng-tools:
+  pkg.removed:
+    - name: rng-tools
 

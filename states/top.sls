@@ -19,7 +19,6 @@ base:
     - users
     - ssh
     - fail2ban
-    - rng-tools
   'apache*':
     - apache2
     - php.php-fpm
