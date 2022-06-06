@@ -20,6 +20,8 @@ install_basic_packages:
       - git
       - whois
       - needrestart
+      - python3
+      - python3-pip
 
 install_python_gnupgp:
   pip.installed:
