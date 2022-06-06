@@ -33,4 +33,21 @@ mailcow:
         7AsSsoQ8vGyyuxaUAE9Dn4MotOailfzUGmoV6g5HVkE/Tw+T02H7PA==
         =YYbc
         -----END PGP MESSAGE-----
-    DBROOT:
+    DBROOT: |
+        -----BEGIN PGP MESSAGE-----
+
+        hQIMAy52OW+QTAwqAQ/9EHf86yFhgwxdKorgEtvoe1JMlH2lWoq9weWoaaPG2AO6
+        mYJNZb51+EHwWlumBcgRXurIPTQ+ARH3QVUOhd+XOBz/xWOeL5au3DuVcJ2EU4Yg
+        ib88/qnXHIW/9oCstkx0MXKyXqpIhqAqlUvR3fi6lmqIbSGWt86VwBp/aXvD350T
+        1TRMTKD9gOohY7qhg7RTqskJ6hUjbitDQL3anW4abwKYcbV/SlwRmC/ptO3lM9E0
+        Bh/d58IQyHdVVsrCUZ34AiuMuHDQLG9pWXccjKGrqoFcuGhH/1PmmVJDzKjRCWPM
+        ISi5iYf0Xe+zd+DU0D3DnEO9DuHs0M7qXSHbDENbUarehMhDx2ExnHN0VAezc62T
+        VW0c4BMAsYYyeisaiO3nrTJO7beOVkLe9Jalkg06M2tYeUSa5AncK5CMZ50Mapca
+        XJbGf8to/Xlft7y1xm64D4J+gU7f1w6Wn5zB9EYCOWV20fOZyIu3lo+36KY+bRTY
+        8ts5dAGKn49b6t2xb7R28x78TynP2g9858mc+eSUA0LTN3kYhOlTwztpvlZOdmqW
+        vjGWV6rnzdoOxxcWayUKTYipXXfvsZMi4/jzY8eOmmIs5X6i+TjMHeBop0uvXp44
+        HA6G1+9edwR27OJi6tsKI2GuQ+wHx7sBCGHSpM1vCORGjbjDrprlQwhDHsk76YjS
+        VwGC+XH2eFIvtbH7xWfCjHpd4jOxMAFH3K0Kbune7gwvgvK+xWY0p7x1Fqu29lC4
+        tupTfUthLkHNZJ/v5qws2UnkbcTZmHlsEfcoKWbU3eruHFteRIPRuQ==
+        =9/x/
+        -----END PGP MESSAGE-----
