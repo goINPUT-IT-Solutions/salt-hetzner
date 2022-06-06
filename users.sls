@@ -26,7 +26,7 @@
       - sudo
     {% endif %}
 
-{{user}}_ssh:
+ssh_{{user}}:
   ssh_auth.present:
     - name: {{args['ssh_auth_key']}}:
     - user: {{user}}
