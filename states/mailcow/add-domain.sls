@@ -35,6 +35,7 @@ add_domain:
                     "tag2"
                 ]
             }
+        - status: 200
             
             
 #            - method: POST
