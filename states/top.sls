@@ -16,7 +16,6 @@ base:
     - buildtools
     - motd
     - zsh
-    - users
     - ssh
     - fail2ban
     - gpg.create-homedir
