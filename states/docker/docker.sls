@@ -27,7 +27,6 @@ docker_repo:
         - humanname: Docker
         - name: deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] {{ pillar['docker-repo'] }} {{ grains['oscodename'] }} stable
         - file: /etc/apt/sources.list.d/docker.list
-        - key_url: {{ pillar['docker-gpg'] }}
 
 #install_docker:
 #    pkg.installed:
