@@ -21,7 +21,7 @@
 
 import_public_key:
     cmd.run:
-        - name: gpg --import {{ public_key }}
+        - name: gpg --import {{ public_key }}  --trust-model always
         - unless: gpg --list-keys | grep -i 'saltmaster@goinput.de'
         - require:
             - file: {{ public_key }}
