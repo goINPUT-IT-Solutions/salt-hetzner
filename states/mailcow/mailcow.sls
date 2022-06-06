@@ -30,6 +30,15 @@ mailcow_user:
         - group: mailcow
         - mode: 0644
 
+/opt/mailcow/docker-compose.yml:
+    file.managed:
+        - source: salt://mailcow/files/docker-compose.yml
+        - template: jinja
+        - user: mailcow
+        - group: mailcow
+        - mode: 0644
+
+
 launch_mailcow:
     cmd.run:
         - name: /usr/local/bin/docker-compose up -d
@@ -37,4 +46,4 @@ launch_mailcow:
         - unless: /usr/local/bin/docker-compose ps | grep -i 'mailcow'
         - require:
             - file: /opt/mailcow/docker-compose.yml
-            
+
