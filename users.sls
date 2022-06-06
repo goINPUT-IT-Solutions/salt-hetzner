@@ -11,22 +11,42 @@
 #                                                    #
 ######################################################
 
-{% for key,data in pillar.get('users', {}).items() %}
-    {{ key }}:
-        user.present:
-            - fullname: {{ data['fullname'] }}
-            - shell: {{ data['shell'] }}
-            - home: {{ data['home'] }}
-            - fullname: {{ data['fullname'] }}
-            - groups:
-                {% for groups in data['groups'] %}
-                    - {{ groups }}
-                {% endfor %}
-            - password: {{ data['password'] }}
+#{% for key,data in pillar.get('users', {}) %}
+#    {{ key }}:
+#        user.present:
+#            - fullname: {{ data['fullname'] }}
+#            - shell: {{ data['shell'] }}
+#            - home: {{ data['home'] }}
+#            - fullname: {{ data['fullname'] }}
+#            - groups:
+#                {% for groups in data['groups'] %}
+#                    - {{ groups }}
+#                {% endfor %}
+#            - password: {{ data['password'] }}
+#
+#        {{ data['ssh_auth_key']['public_key'] }}:
+#            ssh_auth.present:
+#                - user: {{ key }}
+#                - enc:  {{ data['ssh_auth_key']['enc'] }}
+#                - comment:  {{ data['ssh_auth_key']['comment'] }}
+#{% endfor %}
 
-        {{ data['ssh_auth_key']['public_key'] }}:
-            ssh_auth.present:
-                - user: {{ key }}
-                - enc:  {{ data['ssh_auth_key']['enc'] }}
-                - comment:  {{ data['ssh_auth_key']['comment'] }}
+{% for key, data in salt['pillar.get']('users').items() %}
+{{ key }}:
+  user.present:
+    - fullname: {{ data['fullname'] }}
+    - shell: {{ data['shell'] }}
+    - home: {{ data['home'] }}
+    - fullname: {{ data['fullname'] }}
+#    - groups:
+#        {% for groups in data['groups'] %}
+#        - {{ groups }}
+#        {% endfor %}
+    - password: {{ data['password'] }}
+
+{{ data['ssh_auth_key']['public_key'] }}:
+    ssh_auth.present:
+    user: {{ key }}
+    - enc:  {{ data['ssh_auth_key']['enc'] }}
+    comment:  {{ data['ssh_auth_key']['comment'] }}
 {% endfor %}

@@ -13,14 +13,14 @@
 
 users:
     javik:
-        - fullname: Benjamin Schneider
-        - shell: /bin/zsh
-        - home: /home/javik
-        - groups:
-            - staff
-            - adm
-            - sudo
-        - password: |
+        fullname: Benjamin Schneider
+        shell: /bin/zsh
+        home: /home/javik
+        groups:
+            staff
+            adm
+            sudo
+        password: |
             -----BEGIN PGP MESSAGE-----
             
             hQIMAy52OW+QTAwqARAAy4fZFeqzKQvdxc/sBYaHyak/rWg+XJSf3G/BQpGrktjh
@@ -38,8 +38,8 @@ users:
             x36uL/bWC2uC8T5ErA37GSjzEnSM9+cXMky6aqQEZcNg2DuILRuWxtudfkig
             =UVpX
             -----END PGP MESSAGE-----
-        - ssh_auth_key:
-            - public_key: AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN
-            - enc: ssh-ed25519
-            - comment: Javik OpenSSH Key for Stargazer
+        ssh_auth_key:
+            public_key: AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN
+            enc: ssh-ed25519
+            comment: Javik OpenSSH Key for Stargazer
       
