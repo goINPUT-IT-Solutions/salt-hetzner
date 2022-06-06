@@ -14,6 +14,6 @@ base:
   '*':
     - editor
     - docker-repo
-    - user
+    - users
   'mail*':
     - mailcow
