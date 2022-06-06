@@ -10,30 +10,18 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-    - zsh
-    - users
-    - ssh
-    - fail2ban
-  'apache*':
-    - apache2
-    - php.php-fpm
-    - mariadb.mariadb-client
-  'mariadb*':
-    - mariadb.mariadb-server
-    - mariadb.mariadb-client
-  'mail*':
-    - mailcow
-    - mariadb.mariadb-client
-    - docker.docker
-    - docker.docker-compose
-  'nextcloud*':
-    - apache2
-    - php.php-fpm
-    - mariadb.mariadb-client
-#  'salt*': # Things for the master
-#    - gpg
+/etc/salt/gpgkeys:
+  file.directory:
+    - user: root
+    - group: root
+    - dir_mode: 750
+    - file_mode: 640
+
+
+generate_private_key:
+    module.run:
+        - gpg.create_key:
+            - key_type: RSA
+            - key_length: 4096
+            - name_real: Saltmaster
+            - gnupghome: /etc/salt/gpgkeys
