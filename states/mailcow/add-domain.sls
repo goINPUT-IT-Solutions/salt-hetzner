@@ -11,13 +11,12 @@
 ######################################################
 
 add_domain:
-    module.run:
-        http.query:
-            - url: http://localhost/api/v1/add/domain
-            - method: POST
-            - header_dict: "X-API-KEY: {{ pillar['mailcow']['API-KEY'] }}"
-            - data: |
-                {
+    http.query:
+        - name: http://localhost/api/v1/add/domain
+        - method: POST
+        - header_dict: { "X-API-KEY":"{{ pillar['mailcow']['API-KEY'] }}" }
+        - data: |
+            {
                 "active": "1",
                 "aliases": "400",
                 "backupmx": "0",
@@ -35,4 +34,10 @@ add_domain:
                     "tag1",
                     "tag2"
                 ]
-                }
+            }
+            
+            
+#            - method: POST
+#            - header_dict: "X-API-KEY: {{ pillar['mailcow']['API-KEY'] }}"
+#            - data: |
+                
