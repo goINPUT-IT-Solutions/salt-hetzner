@@ -19,7 +19,7 @@
     - shell: {{args['shell']}}
     - home: {{args['home']}}
     - password: {{args['password']}}
-    {% if data['sudo'] == true %}
+    {% if args['sudo'] == true %}
     - groups:
       - staff
       - adm
