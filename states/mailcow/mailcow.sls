@@ -47,3 +47,12 @@ launch_mailcow:
         - require:
             - file: /opt/mailcow/docker-compose.yml
 
+restart_mailcow:
+    cmd.run:
+        - name: /usr/local/bin/docker-compose restart
+        - cwd: /opt/mailcow
+        - onchanges:
+            - file: /opt/mailcow/mailcow.conf
+        - require:
+            - file: /opt/mailcow/docker-compose.yml
+
