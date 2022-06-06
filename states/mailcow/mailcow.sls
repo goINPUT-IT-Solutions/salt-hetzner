@@ -39,20 +39,20 @@ mailcow_user:
         - mode: 0644
 
 
-launch_mailcow:
-    cmd.run:
-        - name: /usr/local/bin/docker-compose up -d
-        - cwd: /opt/mailcow
-        - unless: /usr/local/bin/docker-compose ps | grep -i 'mailcow'
-        - require:
-            - file: /opt/mailcow/docker-compose.yml
+#launch_mailcow:
+#    cmd.run:
+#        - name: /usr/local/bin/docker-compose up -d
+#        - cwd: /opt/mailcow
+#        - unless: /usr/local/bin/docker-compose ps | grep -i 'mailcow'
+#        - require:
+#            - file: /opt/mailcow/docker-compose.yml
 
-restart_mailcow:
-    cmd.run:
-        - name: /usr/local/bin/docker-compose restart
-        - cwd: /opt/mailcow
-        - onchanges:
-            - file: /opt/mailcow/mailcow.conf
-        - require:
-            - file: /opt/mailcow/docker-compose.yml
+#restart_mailcow:
+#    cmd.run:
+#        - name: /usr/local/bin/docker-compose restart
+#        - cwd: /opt/mailcow
+#        - onchanges:
+#            - file: /opt/mailcow/mailcow.conf
+#        - require:
+#            - file: /opt/mailcow/docker-compose.yml
 
