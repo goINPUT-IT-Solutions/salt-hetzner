@@ -14,14 +14,22 @@
   file.directory:
     - user: root
     - group: root
-    - dir_mode: 750
-    - file_mode: 640
+    - dir_mode: 0700
+    - file_mode: 0600
 
 
 generate_private_key:
-    module.run:
-        - gpg.create_key:
-            - key_type: RSA
-            - key_length: 4096
-            - name_real: Saltmaster
-            - gnupghome: /etc/salt/gpgkeys
+    cmd.run:
+        - name: gpg --batch --generate-key --pinentry-mode=loopback --passphrase="" --homedir /etc/salt/gpgkeys /srv/salt/states/gpg/unattended-gpg-key
+        - creates: /etc/salt/gpgkeys/exported_private.key
+
+save_private_key:
+    cmd.run:
+        - name: gpg --homedir /etc/salt/gpgkeys --export-secret-keys --armor > /etc/salt/gpgkeys/exported_private.key
+        - creates: /etc/salt/gpgkeys/exported_private.key
+
+save_public_key:
+    cmd.run:
+        - name: gpg --homedir /etc/salt/gpgkeys --armor --export > /etc/salt/gpgkeys/exported_pubkey.gpg
+        - creates: /etc/salt/gpgkeys/exported_pubkey.gpg
+        

@@ -35,5 +35,5 @@ base:
     - apache2
     - php.php-fpm
     - mariadb.mariadb-client
-#  'salt*': # Things for the master
-#    - gpg
+  'salt*': # Things for the master
+    - gpg.generate-private-key.sls
