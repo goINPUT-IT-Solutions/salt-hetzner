@@ -22,8 +22,7 @@ install_basic_packages:
       - needrestart
       - python3
       - python3-pip
-
-install_python_gnupgp:
-  pip.installed:
-    - pkgs:
       - python-gnupg
+      - rng-tools
+
+
