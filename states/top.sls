@@ -18,7 +18,6 @@ base:
     - zsh
     - ssh
     - fail2ban
-    - users
     - gpg.create-homedir
     - gpg.import-public-key
   'apache*':
