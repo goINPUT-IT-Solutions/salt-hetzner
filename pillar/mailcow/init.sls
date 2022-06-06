@@ -52,4 +52,22 @@ mailcow:
         N8S0V9uDuGkA0WoU2Glf0cxXhfhv9P/GiwfvpJtRtNs00Pud7wtZUQ==
         =Tjrq
         -----END PGP MESSAGE-----
+    API-KEY: |
+        -----BEGIN PGP MESSAGE-----
+
+        hQIMAy52OW+QTAwqAQ//R6ssKTH4g+jX87RLi++pITAbhNcB1W928dogJTptMWIN
+        jNxYBY51IcZtQ6y0KLSMmNj09DTnjnouGYbpS9F8m99jLFYcUGiLFq85srxQCU+k
+        t57CA7ORHVn8SYp/oX08IuYRflzo9L8EhLmgYGdMCcGOvbVvkRTAMvyF+5WgD9aE
+        zmmjSSycWcs83PuErQY1BtWQLrqinUU5hZnHTI56HPiIBk+cy+umoxNnpz7pqp/5
+        NwRwNA6pvFSLoZnGtUAieAzRUgU3gU9JHlzXy5zeb95cqCUiYV3FSppDHkPW42NW
+        KQ3DzdYRbdNEqmNQKChNm7yKtX+LprOitlLFokfFsnUL8io9a9FU88hrhsiWnrVV
+        vEwNifFlR4fxoc0FIzwthYilG1YSbR+l62EX4nFLR+W/Heel0Jj0vxV4PL0EtiQ3
+        ugaVZcTIo4JCcgLiMux1dOe9asHZGfLsjUuco7+i/c37Ks8md+qJbc8HI17r34GM
+        FAGd+MKF8sX7zDSl8whQ9CHuYeShmz1AbpZ0E43YgvUPcH32ded/fJWZLd0nY2oc
+        mmAcCGoTe9XtB2mMQRwtyVnTlymbqSu6fSL7QSMhN1EQIGGqO+JcJw7cQkReiwIl
+        O5wWGNRATNrfh0rqgB/20Dj3nFSNGkVTDOstTykIrofrTmxFacqRBVQ1iCWud+7S
+        XQFkdI1f4IbzlaLkiSG+mbVEnboouhezor/zzCpAqExcpeCADyHubLRAj2181Wv1
+        uPwEnGCbef/F4uaZqcG9DIlIOj+wc7Ncnur3qHvEoCvTy0wm/x5g/mwRBluzQA==
+        =adj0
+        -----END PGP MESSAGE-----
 
