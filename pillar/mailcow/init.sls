@@ -12,7 +12,7 @@
 ######################################################
 
 mailcow:
-    MAILCOW_HOSTNAME: {{ grains['host'] }}
+    MAILCOW_HOSTNAME: {{ grains['fqdn'] }}
     MAILCOW_PASS_SCHEME: BLF-CRYPT
     DBNAME: mailcow
     DBUSER: mailcow
