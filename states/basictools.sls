@@ -25,4 +25,9 @@ install_basic_packages:
       - python-gnupg
       - rng-tools
 
-
+/root/.gnupg:
+  file.directory:
+    - user: root
+    - group: root
+    - dir_mode: 755
+    - file_mode: 644
