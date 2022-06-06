@@ -15,8 +15,7 @@ add_domain:
         http.query:
             - url: http://localhost/api/v1/add/domain
             - method: POST
-            - header_list:
-                - X-API-KEY: {{ pillar['mailcow']['API-KEY'] }}
+            - header_dict: "X-API-KEY: {{ pillar['mailcow']['API-KEY'] }}"
             - data: |
                 {
                 "active": "1",
