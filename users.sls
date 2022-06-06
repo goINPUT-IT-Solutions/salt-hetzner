@@ -16,6 +16,21 @@
 {{user}}:
   user.present:
     - fullname: {{args['fullname']}}
+    - shell: {{args['shell']}}
+    - home: {{args['home']}}
+    - password: {{args['password']}}
+    {% if data['sudo'] == true %}
+    - groups:
+      - staff
+      - adm
+      - sudo
+    {% endif %}
+
+{{args['ssh_auth_key']}}:
+  ssh_auth.present:
+    - user: {{user}}
+    - enc: {{args['ssh_enc']}}
+    - comment: {{args['ssh_comment']}}
 
 {% endfor %}
 

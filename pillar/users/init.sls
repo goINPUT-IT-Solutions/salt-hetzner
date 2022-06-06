@@ -38,3 +38,4 @@ users:
         ssh_auth_key: AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN
         ssh_enc: ssh-ed25519
         ssh_comment: Javik OpenSSH Key for Stargazer
+        sudo: true
