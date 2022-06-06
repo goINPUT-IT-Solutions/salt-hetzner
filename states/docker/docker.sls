@@ -15,10 +15,7 @@ docker_repo:
         - humanname: Docker
         - name: deb {{ pillar['docker-repo'] }} {{ grains['oscodename'] }} stable
         - file: /etc/apt/sources.list.d/docker.list
-        - keyid: 28B04E4A
-        - keyserver: keyserver.ubuntu.com
-        - require_in:
-        - pkg: logstash
+        - key_url: {{ pillar['docker-gpg'] }}
 
 #install_docker:
 #    pkg.installed:
