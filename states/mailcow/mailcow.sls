@@ -32,5 +32,6 @@ mailcow_user:
 
 launch_mailcow:
     module.run:
-        - dockercompose.up: 
-            - path: /opt/mailcow
+        - name: dockercompose.up
+        - path: /opt/mailcow
+        
