@@ -10,6 +10,8 @@
 #                                                    #
 ######################################################
 
+#!jinja|yaml|gpg
+
 mailcow:
     MAILCOW_HOSTNAME: {{ grains['host'] }}
     MAILCOW_PASS_SCHEME: BLF-CRYPT
