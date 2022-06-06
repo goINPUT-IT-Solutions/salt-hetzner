@@ -22,6 +22,7 @@ install_basic_packages:
       - needrestart
       - python3
       - python3-pip
+      - python3-gnupg
 
 /root/.gnupg:
   file.directory:
@@ -29,11 +30,6 @@ install_basic_packages:
     - group: root
     - dir_mode: 755
     - file_mode: 644
-
-install_python_gnupgp:
-  pip.installed:
-    - pkgs:
-      - python-gnupg
 
 rng-tools:
   pkg.removed:
