@@ -10,6 +10,11 @@
 #                                                    #
 ######################################################
 
+docker_gpg_key:
+  cmd.run:
+    - name: curl -fsSL {{ pillar['docker-gpg'] }} | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    - creates: /etc/apt/keyrings/docker.gpg
+
 docker_repo:
     pkgrepo.managed:
         - humanname: Docker
