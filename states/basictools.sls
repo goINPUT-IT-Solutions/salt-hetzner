@@ -22,6 +22,6 @@ install_basic_packages:
       - needrestart
 
 install_python_gnupgp:
-  pip.install:
+  pip.installed:
     - pkgs:
       - python-gnupg
