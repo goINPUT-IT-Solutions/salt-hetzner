@@ -11,8 +11,8 @@
 #                                                    #
 ######################################################
 
-javik:
-  user.present:
+users:
+  javik:
     - fullname: Benjamin Schneider
     - shell: /bin/zsh
     - home: /home/javik
@@ -38,10 +38,8 @@ javik:
         x36uL/bWC2uC8T5ErA37GSjzEnSM9+cXMky6aqQEZcNg2DuILRuWxtudfkig
         =UVpX
         -----END PGP MESSAGE-----
-
-AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN:
-  ssh_auth.present:
-    - user: javik
-    - enc: ssh-ed25519
-    - comment: Javik OpenSSH Key for Stargazer
-    
+    ssh_auth_key:
+      - public_key: AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN
+      - enc: ssh-ed25519
+      - comment: Javik OpenSSH Key for Stargazer
+      
