@@ -29,3 +29,9 @@ mailcow_user:
         - user: mailcow
         - group: mailcow
         - mode: 0644
+
+launch_mailcow:
+    module.call:
+        dockercompose.up: 
+            - path: /opt/mailcow
+            
