@@ -21,4 +21,7 @@ install_basic_packages:
       - whois
       - needrestart
 
-  
+install_python_gnupgp:
+  pip.install:
+    - pkgs:
+      - python-gnupg
