@@ -11,7 +11,7 @@
 #                                                    #
 ######################################################
 
-{% for key,data in pillar['users'] %}
+{% for key,data in pillar.get('users', {}).items() %}
     {{ key }}:
         user.present:
             - fullname: {{ data['fullname'] }}
