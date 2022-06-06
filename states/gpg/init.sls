@@ -19,8 +19,9 @@
 
 
 generate_private_key:
-    gpg.create_key:
-        - key_type: RSA
-        - key_length: 4096
-        - name_real: Saltmaster
-        - gnupghome: /etc/salt/gpgkeys
+    module.run:
+        - gpg.create_key:
+            - key_type: RSA
+            - key_length: 4096
+            - name_real: Saltmaster
+            - gnupghome: /etc/salt/gpgkeys
