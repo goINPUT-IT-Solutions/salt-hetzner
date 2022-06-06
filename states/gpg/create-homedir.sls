@@ -10,21 +10,10 @@
 #                                                    #
 ######################################################
 
-install_basic_packages:
-  pkg.installed:
-    - pkgs:
-      - htop
-      - screen
-      - zip
-      - unzip
-      - git
-      - whois
-      - needrestart
-      - python3
-      - python3-pip
-      - python3-gnupg
-
-rng-tools:
-  pkg.removed:
-    - name: rng-tools
+/root/.gnupg:
+  file.directory:
+    - user: root
+    - group: root
+    - dir_mode: 0700
+    - file_mode: 0600
 

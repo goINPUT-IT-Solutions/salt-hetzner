@@ -19,6 +19,8 @@ base:
     - users
     - ssh
     - fail2ban
+    - gpg.create-homedir
+    - gpg.import-public-key
   'apache*':
     - apache2
     - php.php-fpm

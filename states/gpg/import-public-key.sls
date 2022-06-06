@@ -10,21 +10,18 @@
 #                                                    #
 ######################################################
 
-install_basic_packages:
-  pkg.installed:
-    - pkgs:
-      - htop
-      - screen
-      - zip
-      - unzip
-      - git
-      - whois
-      - needrestart
-      - python3
-      - python3-pip
-      - python3-gnupg
+{% set public_key = '/root/public_gpg.key.gpg' %}
 
-rng-tools:
-  pkg.removed:
-    - name: rng-tools
+{{ public_key }}:
+    file.managed:
+        - source: /etc/salt/gpgkeys/exported_pubkey.gpg
+        - user: root
+        - group: root
+        - mode: 0644
 
+import_public_key:
+    cmd.run:
+        - name: gpg --import {{ public_key }}
+        - unless: gpg --list-keys | grep -i 'saltmaster@goinput.de'
+        - require:
+            - file: {{ public_key }}
