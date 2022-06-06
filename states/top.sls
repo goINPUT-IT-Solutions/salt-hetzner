@@ -36,4 +36,4 @@ base:
     - php.php-fpm
     - mariadb.mariadb-client
   'salt*': # Things for the master
-    - gpg.generate-private-key.sls
+    - gpg.generate-private-key
