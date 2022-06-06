@@ -11,42 +11,19 @@
 #                                                    #
 ######################################################
 
-#{% for key,data in pillar.get('users', {}) %}
-#    {{ key }}:
-#        user.present:
-#            - fullname: {{ data['fullname'] }}
-#            - shell: {{ data['shell'] }}
-#            - home: {{ data['home'] }}
-#            - fullname: {{ data['fullname'] }}
-#            - groups:
-#                {% for groups in data['groups'] %}
-#                    - {{ groups }}
-#                {% endfor %}
-#            - password: {{ data['password'] }}
-#
-#        {{ data['ssh_auth_key']['public_key'] }}:
-#            ssh_auth.present:
-#                - user: {{ key }}
-#                - enc:  {{ data['ssh_auth_key']['enc'] }}
-#                - comment:  {{ data['ssh_auth_key']['comment'] }}
-#{% endfor %}
-
-{% for key, data in salt['pillar.get']('users').items() %}
-{{ key }}:
+javik:
   user.present:
-    - fullname: {{ data['fullname'] }}
-    - shell: {{ data['shell'] }}
-    - home: {{ data['home'] }}
-    - fullname: {{ data['fullname'] }}
-#    - groups:
-#        {% for groups in data['groups'] %}
-#        - {{ groups }}
-#        {% endfor %}
-    - password: {{ data['password'] }}
+    - fullname: Benjamin Schneider
+    - shell: /bin/zsh
+    - home: /home/javik
+    - groups:
+      - staff
+      - adm
+      - sudo
+    - password: $5$aX6bcjk/nwMGEwOE$tOVfAMKbB0l7zbAnuKmgOc4t84Yhl7Yyev2mMTWgA98
 
-#{{ data['ssh_auth_key']['public_key'] }}:
-#    ssh_auth.present:
-#    user: {{ key }}
-#    - enc:  {{ data['ssh_auth_key']['enc'] }}
-#    comment:  {{ data['ssh_auth_key']['comment'] }}
-{% endfor %}
+AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN:
+  ssh_auth.present:
+    - user: javik
+    - enc: ssh-ed25519
+    - comment: Javik OpenSSH Key for Stargazer
