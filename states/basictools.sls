@@ -22,7 +22,6 @@ install_basic_packages:
       - needrestart
       - python3
       - python3-pip
-      - rng-tools
 
 /root/.gnupg:
   file.directory:
