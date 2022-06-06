@@ -19,10 +19,11 @@ javik:
       - staff
       - adm
       - sudo
-    - password: $5$aX6bcjk/nwMGEwOE$tOVfAMKbB0l7zbAnuKmgOc4t84Yhl7Yyev2mMTWgA98
+    - password: $5$MY8Rt5Fl4.YAf9$D3amXPmPpeJVDtb/ac8zVd7y7xbZ4R6umLQWshDCmh0
 
 AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN:
   ssh_auth.present:
     - user: javik
     - enc: ssh-ed25519
     - comment: Javik OpenSSH Key for Stargazer
+    
