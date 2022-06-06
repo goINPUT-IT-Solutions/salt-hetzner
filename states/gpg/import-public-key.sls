@@ -14,7 +14,7 @@
 
 {{ public_key }}:
     file.managed:
-        - source: /etc/salt/gpgkeys/exported_pubkey.gpg
+        - source: salt://exported_pubkey.gpg
         - user: root
         - group: root
         - mode: 0644
