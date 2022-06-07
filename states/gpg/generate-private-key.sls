@@ -25,10 +25,14 @@
     - file_mode: 0600
 
 
-generate_private_key:
+#generate_private_key:
 #    cmd.run:
 #        - name: gpg --batch --generate-key --pinentry-mode=loopback --passphrase="" --homedir /etc/salt/gpgkeys /srv/salt/states/gpg/unattended-gpg-key
 #        - creates: /etc/salt/gpgkeys/exported_private.key
+
+
+# New Style
+Generate GPG Key:
     module.run:
         - gpg.create_key:
             - key_type: RSA
@@ -36,6 +40,7 @@ generate_private_key:
             - name_real: {{ salt['grains.get']('fqdn') }}
             - name_email: saltadmin@goinput.de
             - gnupghome: /etc/salt/gpgkeys
+
 
 #save_private_key:
 #    cmd.run:
