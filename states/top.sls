@@ -19,8 +19,6 @@ base:
     - ssh
     - fail2ban
     - users
-    - gpg.create-homedir
-    - gpg.import-public-key
   'apache*':
     - apache2
     - php.php-fpm
@@ -37,5 +35,3 @@ base:
     - apache2
     - php.php-fpm
     - mariadb.mariadb-client
-  'salt*': # Things for the master
-    - gpg.generate-private-key
