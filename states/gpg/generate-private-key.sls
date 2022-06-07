@@ -17,11 +17,25 @@
     - dir_mode: 0700
     - file_mode: 0600
 
+/srv/salt/public_key:
+  file.directory:
+    - user: root
+    - group: root
+    - dir_mode: 0700
+    - file_mode: 0600
+
 
 generate_private_key:
-    cmd.run:
-        - name: gpg --batch --generate-key --pinentry-mode=loopback --passphrase="" --homedir /etc/salt/gpgkeys /srv/salt/states/gpg/unattended-gpg-key
-        - creates: /etc/salt/gpgkeys/exported_private.key
+#    cmd.run:
+#        - name: gpg --batch --generate-key --pinentry-mode=loopback --passphrase="" --homedir /etc/salt/gpgkeys /srv/salt/states/gpg/unattended-gpg-key
+#        - creates: /etc/salt/gpgkeys/exported_private.key
+    module.run:
+        - name: gpg.create_key
+        - m_key_type: RSA
+        - m_key_length: 4096
+        - m_name_real: {{ salt['grains.get']('fqdn') }}
+        - m_name_email: saltadmin@goinput.de
+        - m_gnupghome: /etc/salt/gpgkeys
 
 save_private_key:
     cmd.run:
@@ -30,6 +44,6 @@ save_private_key:
 
 save_public_key:
     cmd.run:
-        - name: gpg --homedir /etc/salt/gpgkeys --armor --export > /etc/salt/gpgkeys/exported_pubkey.gpg
-        - creates: /etc/salt/gpgkeys/exported_pubkey.gpg
+        - name: gpg --homedir /etc/salt/gpgkeys --armor --export > //srv/salt/public_key/exported_pubkey.gpg
+        - creates: /srv/salt/public_key/exported_pubkey.gpg
         
