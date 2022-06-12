@@ -35,3 +35,5 @@ base:
     - apache2
     - php.php-fpm
     - mariadb.mariadb-client
+  'wireguard*':
+    - wireguard

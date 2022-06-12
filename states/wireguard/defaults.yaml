@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+wireguard:
+  pkg:
+    name: wireguard
+  rootgroup: root
+  config: '/etc/wireguard'
+  service:
+    name: wireguard
+  # Just here for testing
+  added_in_defaults: defaults_value
+  winner: defaults
