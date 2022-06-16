@@ -17,5 +17,7 @@ base:
     - motd
     - users
     - gpg_key
+  'apache*':
+    - apache
   'wireguard*':
     - wireguard
