@@ -10,11 +10,4 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-    - users
-  'wireguard*':
-    - wireguard
+s
