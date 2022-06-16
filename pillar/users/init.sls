@@ -17,9 +17,20 @@ users-formula:
     root_group: root
 
 users:
-  ## Minimal required pillar values
   bschneider:
     fullname: Benjamin Schneider
+    sudouser: true
+    ssh_auth_file:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGgo2OfSxiMyuLPrChe7a/0ySXcWnGLOBXYfpH8/slpC Javik OpenSSH Key for Hikari
   
   ewolfhard:
     fullname: Elias Wolfhard
+    sudouser: true
+    ssh_auth_file:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGgo2OfSxiMyuLPrChe7a/0ySXcWnGLOBXYfpH8/slpC Javik OpenSSH Key for Hikari
+
+  nbuchert:
+    fullname: Nina Buchert
+    sudouser: false
+    ssh_auth_file:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGgo2OfSxiMyuLPrChe7a/0ySXcWnGLOBXYfpH8/slpC Javik OpenSSH Key for Hikari
