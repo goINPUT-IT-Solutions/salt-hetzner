@@ -10,8 +10,13 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - users
-    - cron
-    
+cron:
+  enabled: true     
+  tasks:
+    task1:
+      type: present  
+      name: salt-call state.apply > /dev/null >/dev/null 2>&1
+      user: root
+      minute: '*/5'
+      hour: '*'
+      comment: comment1

@@ -17,6 +17,7 @@ base:
     - motd
     - users
     - gpg_key
+    - cron
   'apache*':
     - apache
   'wireguard*':
