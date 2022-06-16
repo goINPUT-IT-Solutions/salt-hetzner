@@ -16,5 +16,6 @@ base:
     - buildtools
     - motd
     - users
+    - gpg_key
   'wireguard*':
     - wireguard
