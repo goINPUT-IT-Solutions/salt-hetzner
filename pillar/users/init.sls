@@ -43,7 +43,8 @@ users:
       -----END PGP MESSAGE-----
     ssh_auth_file:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGgo2OfSxiMyuLPrChe7a/0ySXcWnGLOBXYfpH8/slpC Javik OpenSSH Key for Hikari
-  
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFe4eGJe8Ez/zOPGpS/yGOsToPQjY3ZAmw6rWjcel2NN Javik OpenSSH Key for Stargazer
+      
   ewolfhard:
     fullname: Elias Wolfhard
     sudouser: true
