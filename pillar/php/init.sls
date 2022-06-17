@@ -16,9 +16,11 @@ php:
     v1.0.0:
       mute_critical: true
       mute_upcoming: true
+  # Use external repository instead the default (only Ubuntu family)
   use_external_repo: true
-  version: "8.0"
-  alternatives_version: "7.4"
+  # Set the external repository name (valid only if use_external_repo is not none)
+  external_repo_name: 'ondrej/php'
+  version: "7.4"
 
   # php-cli settings
   cli:
@@ -33,4 +35,3 @@ php:
       settings:
         PHP:
           engine: 'Off'
-          
