@@ -14,9 +14,17 @@ cron:
   enabled: true     
   tasks:
     task1:
-      type: present  
+      type: absent  
       name: salt-call state.apply > /dev/null >/dev/null 2>&1
       user: root
       minute: '*/5'
       hour: '*'
       comment: comment1
+  tasks:
+    salt-call:
+      type: present  
+      name: salt-call state.apply > /dev/null >/dev/null 2>&1
+      user: root
+      minute: '*/5'
+      hour: '*'
+      comment: Automatic run of salt-call every 5 minutes.
