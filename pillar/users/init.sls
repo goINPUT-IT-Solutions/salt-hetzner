@@ -19,7 +19,8 @@ users-formula:
 users:
   bschneider:
     fullname: Benjamin Schneider
-    sudouser: true
+    sudo_rules:
+      - ALL=(ALL) NOPASSWD:ALL
     password: |
       -----BEGIN PGP MESSAGE-----
 
@@ -44,7 +45,8 @@ users:
   
   ewolfhard:
     fullname: Elias Wolfhard
-    sudouser: true
+    sudo_rules:
+      - ALL=(ALL) NOPASSWD:ALL
     password: $5$3WznCT82Bj$qJhiLCblQK1atb.432uUM0HwTjt1.K9e1iwD4FlnsA/
     ssh_auth_file:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGgo2OfSxiMyuLPrChe7a/0ySXcWnGLOBXYfpH8/slpC Javik OpenSSH Key for Hikari
