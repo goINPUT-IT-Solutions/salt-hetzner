@@ -18,7 +18,19 @@ base:
     - users
     - gpg_key
     - cron
+    - php.cli
+    - php.composer
+    - php.bz2
+    - php.curl
+    - php.gd
+    - php.imagick
+    - php.json
+    - php.mbstring
+    - php.mysql
+    - php.readline
+    - php.zip
   'apache*':
     - apache
+    - php.fpm
   'wireguard*':
     - wireguard
