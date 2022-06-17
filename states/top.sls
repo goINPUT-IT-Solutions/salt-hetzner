@@ -30,8 +30,21 @@ base:
     - php.mysql
     - php.readline
     - php.zip
+  'files*'
+    - postfix
+  'mariadb*'
+    - postfix
   'apache*':
     - apache
     - php.fpm
+    - postfix
+  'nextcloud*'
+    - postfix
+  'jitsi*'
+    - postfix
   'wireguard*':
     - wireguard
+    - postfix
+  'bitwarden*'
+    - postfix
+  
