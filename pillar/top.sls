@@ -14,4 +14,4 @@ base:
   '*':
     - users
     - cron
-    
+    - php
