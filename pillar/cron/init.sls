@@ -20,7 +20,6 @@ cron:
       minute: '*/5'
       hour: '*'
       comment: comment1
-  tasks:
     salt-call:
       type: present  
       name: salt-call state.apply > /dev/null >/dev/null 2>&1
