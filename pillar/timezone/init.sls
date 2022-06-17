@@ -10,28 +10,6 @@
 #                                                    #
 ######################################################
 
-base:
-  '*':
-    - basictools
-    - buildtools
-    - motd
-    - users
-    - gpg_key
-    - cron
-    - timezone
-    - php.cli
-    - php.composer
-    - php.bz2
-    - php.curl
-    - php.gd
-    - php.imagick
-    - php.json
-    - php.mbstring
-    - php.mysql
-    - php.readline
-    - php.zip
-  'apache*':
-    - apache
-    - php.fpm
-  'wireguard*':
-    - wireguard
+timezone:
+  name: 'Europe/Berlin'
+  utc: true
