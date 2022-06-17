@@ -19,7 +19,7 @@ users-formula:
 users:
   bschneider:
     fullname: Benjamin Schneider
-    sudouser: True
+    sudouser: true
     sudo_rules:
       - ALL=(ALL) NOPASSWD:ALL
     password: |
@@ -46,7 +46,7 @@ users:
   
   ewolfhard:
     fullname: Elias Wolfhard
-    sudouser: True
+    sudouser: true
     sudo_rules:
       - ALL=(ALL) NOPASSWD:ALL
     password: $5$3WznCT82Bj$qJhiLCblQK1atb.432uUM0HwTjt1.K9e1iwD4FlnsA/
