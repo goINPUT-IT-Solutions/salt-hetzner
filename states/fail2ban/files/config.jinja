@@ -1,0 +1,17 @@
+#
+# This file is managed by salt. Do not edit by hand.
+#
+{%- macro print_config(name, value) %}
+{%-   if value is iterable and value is not string %}
+{{      name }} = {{ value | join('\n') | indent(name | length + 3) }}
+{%-   else %}
+{{      name }} = {{ value }}
+{%-   endif %}
+{%- endmacro %}
+
+{%- for section, section_data in config|dictsort %}
+[{{ section }}]
+{%- for name, value in section_data|dictsort %}
+{{- print_config(name, value) }}
+{%- endfor %}
+{% endfor %}
